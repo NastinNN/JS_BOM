@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Task 2</title>
+</head>
+<body>
+      <input type="button" id="btn" value="Информация об экране">
+      <br> <br>
+      <label for="">Разрешение по ширине</label>
+      <input type="text" id="resolution-width" readonly>
+      <br>
+      <label for="">Разрешение по высоте</label>
+      <input type="text" id="resolution-height" readonly>
+      <br>
+      <label for="">Ширина рабочей области</label>
+      <input type="text" id="workspace-width" readonly>
+      <br>
+      <label for="">Высота рабочей области</label>
+      <input type="text" id="workspace-height" readonly>
+      <br> <br>
+      <a href="./3.html">Следующая страницы</a>
+      <br>
+      <a href="#" onclick="history.back()">Назад</a>
+      
+      <script>
+            document.getElementById("btn").onclick=function(){
+                  document.getElementById("resolution-width").value=window.screen.width;
+                  document.getElementById("resolution-height").value=window.screen.height;
+                  document.getElementById("workspace-width").value=window.screen.availWidth;
+                  document.getElementById("workspace-height").value=window.screen.availHeight;
+            }
+      </script>
+</body>
+</html>
