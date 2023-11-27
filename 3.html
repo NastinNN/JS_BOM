@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Task 3</title>
+</head>
+<body>
+      <a href="https://github.com/NastinNN/JS_BOM" onclick="event.preventDefault()">Ссылка с отменой действия по умолчанию</a>
+      <br><br>
+      
+      <form action="#">
+            <label for="accrued">Начислено</label>
+            <input type="text" id="accrued"><br>
+            <label for="withheld">Удержано</label>
+            <input type="text" id="withheld"><br>
+            <label for="total">Итого</label>
+            <input type="text" id="total" readonly> <br><br>
+
+            <input type="button" id="btn" value="Подсчитать">
+            <input type="reset" value="Сбросить">
+      </form>
+      <br>
+      <a href="#" onclick="history.back()">Назад</a>
+
+      <script>
+      document.getElementById("btn").onclick=function(){
+            document.getElementById("total").value=document.getElementById("accrued").value-document.getElementById("withheld").value;
+      }
+      </script>
+</body>
+</html>
