@@ -8,7 +8,7 @@
 <body>
       <a href="https://github.com/NastinNN/JS_BOM" onclick="event.preventDefault()">Ссылка с отменой действия по умолчанию</a>
       <br><br>
-      
+
       <form action="#">
             <label for="accrued">Начислено</label>
             <input type="text" id="accrued"><br>
@@ -25,7 +25,10 @@
 
       <script>
       document.getElementById("btn").onclick=function(){
-            document.getElementById("total").value=document.getElementById("accrued").value-document.getElementById("withheld").value;
+            if (isNaN(document.getElementById("accrued").value) || isNaN(document.getElementById("withheld").value))
+                  document.getElementById("total").value="Ошибка. Введены не числа";
+            else
+                  document.getElementById("total").value=document.getElementById("accrued").value-document.getElementById("withheld").value;
       }
       </script>
 </body>
